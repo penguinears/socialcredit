@@ -1,0 +1,112 @@
+body{
+  background:#b30000;
+  color:#ffd700;
+  font-family:"Varela Round";
+  margin:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+#banner{
+  position:fixed;
+  top:-60px;
+  left:0;
+  width:100%;
+  background:#ffd700;
+  color:#b30000;
+  text-align:center;
+  padding:15px;
+  font-weight:bold;
+  transition:top 0.4s ease;
+  z-index:9999;
+}
+
+#title_container{
+  height:100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#8b0000;
+  border-bottom:4px solid #ffd700;
+  flex-shrink:0;
+}
+
+#title{
+  font-family:"Bungee Outline";
+  font-size:32px;
+}
+
+#join_container{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#join_inner_container{
+  width:90%;
+  max-width:420px;
+}
+
+#chat_container{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+#chat_inner_container{
+  width:95%;
+  max-width:420px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+#chat_content_container{
+  flex:1;
+  overflow-y:auto;
+  margin-bottom:10px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  text-align:center;
+  border:none;
+  border-bottom:2px dashed #ffd700;
+  background:transparent;
+  color:#ffd700;
+}
+
+button{
+  margin-top:10px;
+  width:100%;
+  padding:10px;
+  font-weight:bold;
+  background:#ffd700;
+  color:#b30000;
+  cursor:pointer;
+}
+
+.message_container{
+  margin-bottom:10px;
+}
+
+.vote{
+  cursor:pointer;
+  font-size:18px;
+  margin:0 5px;
+}
+
+.score{
+  font-weight:bold;
+}
+
+.system-name{
+  color:#ffd700;
+}
+
+.system-msg{
+  font-style:italic;
+}
