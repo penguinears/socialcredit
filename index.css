@@ -1,141 +1,131 @@
-/* BODY */
 body {
-  background: #b30000;
-  color: #ffd700;
-  font-family: "Varela Round", sans-serif;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* important to prevent full page scroll */
+  background:#b30000;
+  color:#ffd700;
+  font-family:"Varela Round", sans-serif;
+  margin:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
 }
 
-/* BANNER */
 #banner {
-  position: fixed;
-  top: -60px;
-  left: 0;
-  width: 100%;
-  background: #ffd700;
-  color: #b30000;
-  text-align: center;
-  padding: 15px;
-  font-weight: bold;
-  font-size: 16px; /* bigger for mobile */
-  transition: top 0.4s ease;
-  z-index: 9999;
+  position:fixed;
+  top:-60px;
+  left:0;
+  width:100%;
+  background:#ffd700;
+  color:#b30000;
+  text-align:center;
+  padding:15px;
+  font-weight:bold;
+  font-size:16px; /* bigger text */
+  transition:top 0.4s ease;
+  z-index:9999;
 }
 
-/* TITLE */
 #title_container {
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #8b0000;
-  border-bottom: 4px solid #ffd700;
-  flex-shrink: 0;
+  height:80px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#8b0000;
+  border-bottom:4px solid #ffd700;
+  flex-shrink:0;
 }
 
 #title {
-  font-family: "Bungee Outline", sans-serif;
-  font-size: 28px; /* bigger for mobile */
-  text-align: center;
-  margin: 0;
+  font-family:"Bungee Outline", sans-serif;
+  font-size:28px; /* bigger for mobile */
+  text-align:center;
+  margin:0;
 }
 
-/* JOIN / USERNAME */
 #join_container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 #join_inner_container {
-  width: 90%;
-  max-width: 420px;
+  width:90%;
+  max-width:420px;
 }
 
 input {
-  width: 100%;
-  padding: 14px; /* bigger tap area */
-  text-align: center;
-  border: none;
-  border-bottom: 2px dashed #ffd700;
-  background: transparent;
-  color: #ffd700;
-  font-size: 18px; /* bigger text */
+  width:100%;
+  padding:14px; /* bigger tap area */
+  text-align:center;
+  border:none;
+  border-bottom:2px dashed #ffd700;
+  background:transparent;
+  color:#ffd700;
+  font-size:18px; /* bigger text */
 }
 
 button {
-  margin-top: 12px;
-  width: 100%;
-  padding: 14px; /* bigger tap area */
-  font-weight: bold;
-  background: #ffd700;
-  color: #b30000;
-  cursor: pointer;
-  font-size: 18px; /* bigger text */
+  margin-top:12px;
+  width:100%;
+  padding:14px;
+  font-weight:bold;
+  background:#ffd700;
+  color:#b30000;
+  cursor:pointer;
+  font-size:18px; /* bigger text */
 }
 
-/* CHAT WRAPPER */
 #chat_container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  flex:1;
+  display:flex;
+  justify-content:center;
+  overflow:hidden;
 }
 
 #chat_inner_container {
-  width: 95%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  width:95%;
+  max-width:420px;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
-/* ONLY CHAT CONTENT SCROLLS */
 #chat_content_container {
-  flex: 1;
-  overflow-y: auto;
-  margin-bottom: 10px;
-  padding: 5px;
-  font-size: 16px; /* bigger messages */
+  flex:1;
+  overflow-y:auto;
+  margin-bottom:10px;
+  font-size:16px; /* bigger text */
 }
 
-/* MESSAGES */
 .message_container {
-  margin-bottom: 10px;
-  background: #330000;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 16px; /* bigger text */
+  margin-bottom:10px;
+  font-size:16px; /* bigger text */
+  /* No bubbles, background, or padding added */
 }
 
 .vote {
-  cursor: pointer;
-  font-size: 20px; /* bigger vote arrows */
-  margin: 0 5px;
+  cursor:pointer;
+  font-size:20px; /* bigger vote arrows */
+  margin:0 5px;
 }
 
 .score {
-  font-weight: bold;
-  font-size: 16px;
+  font-weight:bold;
+  font-size:16px;
 }
 
 .system-name {
-  color: #ffd700;
-  font-size: 16px;
+  color:#ffd700;
+  font-size:16px;
 }
 
 .system-msg {
-  font-style: italic;
-  font-size: 16px;
+  font-style:italic;
+  font-size:16px;
 }
 
-/* INPUT BAR FIXED AT BOTTOM */
+/* Keep input / send button fixed at bottom */
 #chat_inner_container input,
 #chat_inner_container button {
-  flex-shrink: 0;
+  flex-shrink:0;
 }
