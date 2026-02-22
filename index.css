@@ -1,112 +1,141 @@
-body{
-  background:#b30000;
-  color:#ffd700;
-  font-family:"Varela Round";
-  margin:0;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
+/* BODY */
+body {
+  background: #b30000;
+  color: #ffd700;
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* important to prevent full page scroll */
 }
 
-#banner{
-  position:fixed;
-  top:-60px;
-  left:0;
-  width:100%;
-  background:#ffd700;
-  color:#b30000;
-  text-align:center;
-  padding:15px;
-  font-weight:bold;
-  transition:top 0.4s ease;
-  z-index:9999;
+/* BANNER */
+#banner {
+  position: fixed;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  background: #ffd700;
+  color: #b30000;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px; /* bigger for mobile */
+  transition: top 0.4s ease;
+  z-index: 9999;
 }
 
-#title_container{
-  height:100px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#8b0000;
-  border-bottom:4px solid #ffd700;
-  flex-shrink:0;
+/* TITLE */
+#title_container {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8b0000;
+  border-bottom: 4px solid #ffd700;
+  flex-shrink: 0;
 }
 
-#title{
-  font-family:"Bungee Outline";
-  font-size:32px;
+#title {
+  font-family: "Bungee Outline", sans-serif;
+  font-size: 28px; /* bigger for mobile */
+  text-align: center;
+  margin: 0;
 }
 
-#join_container{
-  flex:1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+/* JOIN / USERNAME */
+#join_container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#join_inner_container{
-  width:90%;
-  max-width:420px;
+#join_inner_container {
+  width: 90%;
+  max-width: 420px;
 }
 
-#chat_container{
-  flex:1;
-  display:flex;
-  justify-content:center;
+input {
+  width: 100%;
+  padding: 14px; /* bigger tap area */
+  text-align: center;
+  border: none;
+  border-bottom: 2px dashed #ffd700;
+  background: transparent;
+  color: #ffd700;
+  font-size: 18px; /* bigger text */
 }
 
-#chat_inner_container{
-  width:95%;
-  max-width:420px;
-  display:flex;
-  flex-direction:column;
-  flex:1;
+button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 14px; /* bigger tap area */
+  font-weight: bold;
+  background: #ffd700;
+  color: #b30000;
+  cursor: pointer;
+  font-size: 18px; /* bigger text */
 }
 
-#chat_content_container{
-  flex:1;
-  overflow-y:auto;
-  margin-bottom:10px;
+/* CHAT WRAPPER */
+#chat_container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-input{
-  width:100%;
-  padding:10px;
-  text-align:center;
-  border:none;
-  border-bottom:2px dashed #ffd700;
-  background:transparent;
-  color:#ffd700;
+#chat_inner_container {
+  width: 95%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-button{
-  margin-top:10px;
-  width:100%;
-  padding:10px;
-  font-weight:bold;
-  background:#ffd700;
-  color:#b30000;
-  cursor:pointer;
+/* ONLY CHAT CONTENT SCROLLS */
+#chat_content_container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px; /* bigger messages */
 }
 
-.message_container{
-  margin-bottom:10px;
+/* MESSAGES */
+.message_container {
+  margin-bottom: 10px;
+  background: #330000;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px; /* bigger text */
 }
 
-.vote{
-  cursor:pointer;
-  font-size:18px;
-  margin:0 5px;
+.vote {
+  cursor: pointer;
+  font-size: 20px; /* bigger vote arrows */
+  margin: 0 5px;
 }
 
-.score{
-  font-weight:bold;
+.score {
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.system-name{
-  color:#ffd700;
+.system-name {
+  color: #ffd700;
+  font-size: 16px;
 }
 
-.system-msg{
-  font-style:italic;
+.system-msg {
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* INPUT BAR FIXED AT BOTTOM */
+#chat_inner_container input,
+#chat_inner_container button {
+  flex-shrink: 0;
 }
